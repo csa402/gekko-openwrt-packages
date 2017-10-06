@@ -59,7 +59,7 @@ endef
 TARGET_LDFLAGS += -Wl,-rpath-link=$(STAGING_DIR)/usr/lib
 
 ifeq ($(CONFIG_CGMINER_GEKKO),y)
-	CONFIGURE_ARGS += --enable-gekko
+	CONFIGURE_ARGS += --enable-gekko --enable-bflsc
 endif
 ifeq ($(CONFIG_TARGET_brcm2708_RaspberryPi),)
 	CONFIGURE_ARGS += --without-curses
