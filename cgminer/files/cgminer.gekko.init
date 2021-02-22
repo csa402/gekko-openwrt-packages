@@ -23,6 +23,7 @@ start() {
 
 	local _cf1
 	local _cf2
+	local _cf3
 
 	local _aa
 	local _mo
@@ -44,6 +45,7 @@ start() {
 
 	config_get _cf1 default cf1
         config_get _cf2 default cf2
+	config_get -cf3 default cf3
 
 	config_get _aa default api_allow
 
@@ -61,7 +63,7 @@ start() {
 	    POOL3="-o $_pool3url -O $_pool3user:$_pool3pw"
 	fi
 
-	AVA4_OPTIONS="--gekko-2pac-freq $_cf1 --gekko-compac-freq $_cf2"
+	AVA4_OPTIONS="--gekko-2pac-freq $_cf1 --gekko-compac-freq $_cf2 --gekko-compac-freq $_cf3"
         PARAMS=" $POOL1 $POOL2 $POOL3 --api-allow $_aa --api-listen $_mo --real-quiet $AVA4_OPTIONS "
 
 	NTP_POOL="-p 0.openwrt.pool.ntp.org -p 1.openwrt.pool.ntp.org  -p 3.openwrt.pool.ntp.org -p 4.openwrt.pool.ntp.org"
