@@ -45,7 +45,7 @@ start() {
 
 	config_get _cf1 default cf1
         config_get _cf2 default cf2
-	config_get -cf3 default cf3
+	config_get _cf3 default cf3
 
 	config_get _aa default api_allow
 
