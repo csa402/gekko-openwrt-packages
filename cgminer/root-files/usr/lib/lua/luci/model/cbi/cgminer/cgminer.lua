@@ -29,12 +29,16 @@ pb:value("--load-balance", translate("Load Balance"))
 pb:value("  ", translate("Failover"))
 
 cf1 = conf:option(Value, "cf1", translate("2pac Chip Frequency(Range: 100-250, Default: 100)"))
-cf1.default = "100"
+cf1.default = "150"
 cf1.datatype = "range(100, 300)"
 
 cf2 = conf:option(Value, "cf2", translate("Gekko Chip Frequency(Range: 100-500, Default: 150)"))
 cf2.default = "150"
 cf2.datatype = "range(100, 500)"
+
+cf3 = conf:option(Value, "cf3", translate("Newpac Chip Frequency(Range: 100-500, Default: 150)"))
+cf3.default = "150"
+cf3.datatype = "range(100, 500)"
 
 api_allow = conf:option(Value, "api_allow", translate("API Allow(Default: W:127.0.0.1)"))
 more_options = conf:option(Value, "more_options", translate("More Options"))
